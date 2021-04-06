@@ -16,6 +16,7 @@
     - name: Install docker-py
       pip:
         name: docker-py
+        state: 1.10.6
 
   tasks:
     - name: Install yum utils
