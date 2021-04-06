@@ -50,7 +50,7 @@
     - name: Install Docker
       package:
         name: docker-ce
-        state: latest
+        state: 2.0.0
     - name: Start Docker service
       service:
         name: docker
