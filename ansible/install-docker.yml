@@ -16,7 +16,13 @@
     - name: Install docker-py
       pip:
         name: docker-py
-
+    - name: Install prerequisites packages
+      yum:
+        name: unzip
+        state: present
+      vars:
+        ansible_python_interpreter: /usr/bin/python
+        
   tasks:
     - name: Install yum utils
       yum:

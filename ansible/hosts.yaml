@@ -2,4 +2,3 @@ all:
   hosts:
     app_vm:
       localhost: 192.168.154.133
-      ansible_python_interpreter=/usr/bin/python2.7
