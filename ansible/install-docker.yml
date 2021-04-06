@@ -16,13 +16,12 @@
     - name: Install docker-py
       pip:
         name: docker-py
-    - name: Install prerequisites packages
-      yum:
-        name: unzip
-        state: present
-      vars:
-        ansible_python_interpreter: /usr/bin/python
-        
+    - name: Install rsyslog packages
+      package: pkg={{item}} state=installed
+      with_items:
+        - rsyslog
+      notify: Restart rsyslog service
+
   tasks:
     - name: Install yum utils
       yum:
